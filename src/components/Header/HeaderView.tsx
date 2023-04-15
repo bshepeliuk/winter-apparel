@@ -1,3 +1,4 @@
+import BurgerMenu from '../BurgerMenu/BurgerMenu';
 import {
   BuyButton,
   Header,
@@ -14,6 +15,10 @@ function HeaderView() {
       <div className="container">
         <Wrapper>
           <LogoLink href="#">LANDING</LogoLink>
+
+          <div className="burger-menu">
+            <BurgerMenu />
+          </div>
 
           <Navigation>
             <NavList>
@@ -32,7 +37,7 @@ function HeaderView() {
             </NavList>
           </Navigation>
 
-          <div>
+          <div className="buy-wrapper">
             <BuyButton type="button">buy</BuyButton>
           </div>
         </Wrapper>

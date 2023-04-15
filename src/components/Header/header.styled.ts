@@ -7,6 +7,7 @@ export const LogoLink = styled.a`
   font-size: 80px;
   line-height: 80px;
   color: #2e3341;
+  padding-top: 10px;
 `;
 
 export const Header = styled.header`
