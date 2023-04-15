@@ -1,5 +1,7 @@
 import BurgerMenu from '../BurgerMenu/BurgerMenu';
 import {
+  BurgerWrapper,
+  BuyBtnWrapper,
   BuyButton,
   Header,
   ListItem,
@@ -16,9 +18,9 @@ function HeaderView() {
         <Wrapper>
           <LogoLink href="#">LANDING</LogoLink>
 
-          <div className="burger-menu">
+          <BurgerWrapper>
             <BurgerMenu />
-          </div>
+          </BurgerWrapper>
 
           <Navigation>
             <NavList>
@@ -37,9 +39,9 @@ function HeaderView() {
             </NavList>
           </Navigation>
 
-          <div className="buy-wrapper">
+          <BuyBtnWrapper>
             <BuyButton type="button">buy</BuyButton>
-          </div>
+          </BuyBtnWrapper>
         </Wrapper>
       </div>
     </Header>

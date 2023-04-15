@@ -59,14 +59,6 @@ p {
   position: absolute;
 }
 
-.burger-menu {
-  display: none;
-}
-
-.buy-wrapper {
-  display: flex;
-}
-
 @keyframes move-right {
   0% {
     transform: translateX(100vh);
@@ -82,17 +74,5 @@ p {
   }
   100% {
     transform: translateX(0);
-  }
-}
-
-@media (max-width: 700px) {
-  .burger-menu {
-    display: block;
-  }
-}
-
-@media (max-width: 470px) {
-  .buy-wrapper {
-    display: none;
   }
 }

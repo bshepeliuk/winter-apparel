@@ -138,3 +138,19 @@ export const BuyButton = styled.button`
     transform: rotate(0);
   }
 `;
+
+export const BurgerWrapper = styled.div`
+  display: none;
+
+  @media (max-width: 700px) {
+    display: block;
+  }
+`;
+
+export const BuyBtnWrapper = styled.div`
+  display: flex;
+
+  @media (max-width: 470px) {
+    display: none;
+  }
+`;
