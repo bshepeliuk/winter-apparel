@@ -1,13 +1,8 @@
 import { ChangeEvent, useState } from 'react';
 
-import {
-  BackgroundOfCreate,
-  Input,
-  Label,
-  Mask,
-  Wrapper,
-} from './imageInput.styled';
+import { Input, Label, Wrapper } from './imageInput.styled';
 import DefaultBackgroundUrl from '../../assets/create-background.jpg';
+import MaskOfCreateView from '../MaskOfCreate/MaskOfCreateView';
 
 function ImageInput() {
   const [url, setUrl] = useState(DefaultBackgroundUrl);
@@ -31,9 +26,7 @@ function ImageInput() {
         onChange={handleChange}
       />
       <Label htmlFor="image-input">
-        <Mask>
-          <BackgroundOfCreate url={url} />
-        </Mask>
+        <MaskOfCreateView backgroundUrl={url} />
       </Label>
     </Wrapper>
   );
