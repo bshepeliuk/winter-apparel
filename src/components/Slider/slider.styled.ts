@@ -12,3 +12,15 @@ export const Image = styled.img`
   height: 100%;
   object-fit: cover;
 `;
+
+export const LeftArrowWrapper = styled.div`
+  width: 29px;
+  height: 29px;
+  position: absolute;
+`;
+
+export const RightArrowWrapper = styled.div`
+  width: 29px;
+  height: 29px;
+  position: absolute;
+`;

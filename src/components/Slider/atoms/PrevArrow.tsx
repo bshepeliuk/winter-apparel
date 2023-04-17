@@ -1,15 +1,16 @@
 import { CustomArrowProps } from 'react-slick';
 import { CSSProperties } from 'styled-components';
 import LeftArrowUrl from '../../../assets/left-arrow.png';
+import { LeftArrowWrapper } from '../slider.styled';
 
 function PrevArrow(props: CustomArrowProps) {
   const { className, style, onClick } = props;
 
   return (
     <div className={className} style={getArrowStyles(style!)} onClick={onClick}>
-      <div className="left-arrow">
+      <LeftArrowWrapper>
         <img src={LeftArrowUrl} />
-      </div>
+      </LeftArrowWrapper>
     </div>
   );
 }

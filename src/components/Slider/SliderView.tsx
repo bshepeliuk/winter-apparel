@@ -1,28 +1,23 @@
 import { useState } from 'react';
 import Slider from 'react-slick';
 
-import SliderItemUrl1 from '../../assets/slider-item-1.jpg';
-import SliderItemUrl2 from '../../assets/slider-item-2.jpg';
-import SliderItemUrl3 from '../../assets/slider-item-3.jpg';
-import SliderItemUrl4 from '../../assets/slider-item-4.jpg';
-import SliderItemUrl5 from '../../assets/slider-item-5.jpg';
+import Slide1 from '../../assets/slide-1.jpg';
+import Slide2 from '../../assets/slide-2.jpg';
+import Slide3 from '../../assets/slide-3.jpg';
+import Slide4 from '../../assets/slide-4.jpg';
+import Slide5 from '../../assets/slide-5.jpg';
 import { Image, Wrapper } from './slider.styled';
 import NextArrow from './atoms/NextArrow';
 import PrevArrow from './atoms/PrevArrow';
 
-const defaultImages = [
-  SliderItemUrl1,
-  SliderItemUrl2,
-  SliderItemUrl3,
-  SliderItemUrl4,
-  SliderItemUrl5,
-];
+const defaultImages = [Slide1, Slide2, Slide3, Slide4, Slide5];
 
 const settings = {
   speed: 500,
   slidesToShow: 3,
   slidesToScroll: 1,
   slidesPerRow: 1,
+  initialSlide: 3,
   row: 1,
   centerMode: true,
   variableWidth: true,
@@ -40,6 +35,7 @@ const settings = {
     {
       breakpoint: 530,
       settings: {
+        slidesToShow: 1,
         arrows: false,
         centerMode: false,
       },

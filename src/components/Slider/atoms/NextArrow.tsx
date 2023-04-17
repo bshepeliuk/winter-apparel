@@ -1,15 +1,16 @@
 import { CustomArrowProps } from 'react-slick';
 import { CSSProperties } from 'styled-components';
 import RightArrowUrl from '../../../assets/right-arrow.png';
+import { RightArrowWrapper } from '../slider.styled';
 
 function NextArrow(props: CustomArrowProps) {
   const { className, style, onClick } = props;
 
   return (
     <div className={className} style={getArrowStyles(style!)} onClick={onClick}>
-      <div className="right-arrow">
+      <RightArrowWrapper>
         <img src={RightArrowUrl} />
-      </div>
+      </RightArrowWrapper>
     </div>
   );
 }

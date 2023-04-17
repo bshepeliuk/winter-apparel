@@ -33,6 +33,7 @@ export const Label = styled.label`
 
 export const Mask = styled.div`
   -webkit-mask-image: url(${MaskUrl});
+  mask-image: url(${MaskUrl});
   -webkit-mask-repeat: no-repeat;
   width: 486px;
   height: 710px;

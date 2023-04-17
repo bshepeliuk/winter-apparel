@@ -52,13 +52,6 @@ p {
   margin-top: 137px;
 }
 
-.left-arrow,
-.right-arrow {
-  width: 29px;
-  height: 29px;
-  position: absolute;
-}
-
 @keyframes move-right {
   0% {
     transform: translateX(100vh);
