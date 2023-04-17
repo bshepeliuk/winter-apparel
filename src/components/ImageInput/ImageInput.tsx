@@ -23,6 +23,7 @@ function ImageInput() {
         type="file"
         name="image-input"
         id="image-input"
+        accept=".jpg, .jpeg, .png, .svg"
         onChange={handleChange}
       />
       <Label htmlFor="image-input">
