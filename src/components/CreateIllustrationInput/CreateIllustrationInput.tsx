@@ -1,10 +1,10 @@
 import { ChangeEvent, useState } from 'react';
 
-import { Input, Label, Wrapper } from './imageInput.styled';
+import { Input, Label, Wrapper } from './createIllustrationInput.styled';
 import DefaultBackgroundUrl from '../../assets/create-background.jpg';
 import MaskOfCreateView from '../MaskOfCreate/MaskOfCreateView';
 
-function ImageInput() {
+function CreateIllustrationInput() {
   const [url, setUrl] = useState(DefaultBackgroundUrl);
 
   const handleChange = (evt: ChangeEvent<HTMLInputElement>) => {
@@ -33,4 +33,4 @@ function ImageInput() {
   );
 }
 
-export default ImageInput;
+export default CreateIllustrationInput;

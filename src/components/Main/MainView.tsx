@@ -1,5 +1,5 @@
 import AvailableApps from '../Apps/AvailableAppsView';
-import ImageInput from '../ImageInput/ImageInput';
+import CreateIllustrationView from '../CreateIllustration/CreateIllustrationView';
 import LineView from '../Line/LineView';
 import SliderView from '../Slider/SliderView';
 import {
@@ -27,7 +27,7 @@ function MainView() {
               </MainTitle>
             </LeftSide>
             <RightSide>
-              <ImageInput />
+              <CreateIllustrationView />
             </RightSide>
           </InnerWrapper>
         </div>

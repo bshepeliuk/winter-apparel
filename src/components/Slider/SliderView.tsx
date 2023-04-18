@@ -10,7 +10,13 @@ import { Image, Wrapper } from './slider.styled';
 import NextArrow from './atoms/NextArrow';
 import PrevArrow from './atoms/PrevArrow';
 
-const defaultImages = [Slide1, Slide2, Slide3, Slide4, Slide5];
+const defaultImages = [
+  { id: 1, url: Slide1 },
+  { id: 2, url: Slide2 },
+  { id: 3, url: Slide3 },
+  { id: 4, url: Slide4 },
+  { id: 5, url: Slide5 },
+];
 
 const settings = {
   speed: 500,
@@ -33,9 +39,10 @@ const settings = {
       },
     },
     {
-      breakpoint: 530,
+      breakpoint: 700,
       settings: {
         slidesToShow: 1,
+        initialSlide: 0,
         arrows: false,
         centerMode: false,
       },
@@ -48,9 +55,9 @@ function SliderView() {
 
   return (
     <Slider {...settings}>
-      {images.map((url, idx) => (
-        <Wrapper key={idx} style={{ width: 242 }}>
-          <Image src={url} />
+      {images.map((img) => (
+        <Wrapper key={img.id} style={{ width: 242 }}>
+          <Image src={img.url} />
         </Wrapper>
       ))}
     </Slider>
