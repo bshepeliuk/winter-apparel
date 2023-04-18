@@ -11,7 +11,7 @@ function MaskOfCreateView({ backgroundUrl }: IProps) {
   return (
     <MaskSvg width={WIDTH} height={HEIGHT}>
       <mask id="mask-of-create">
-        <g>
+        <g filter="url(#drop-shadow)">
           <path
             id="c-letter"
             d="M117.632 117.871C117.632 118.947 118.036 119.957 118.843 120.898C119.65 121.706 120.66 122.11 121.871 122.11H234.503C235.579 122.11 236.521 122.513 237.329 123.321C238.27 124.128 238.741 125.137 238.741 126.348V230.503C238.741 231.579 238.27 232.521 237.329 233.329C236.521 234.27 235.579 234.741 234.503 234.741H9.23883C8.02774 234.741 7.01849 234.27 6.2111 233.329C5.4037 232.521 5 231.579 5 230.503V5.23884C5 4.02774 5.4037 3.01849 6.2111 2.21109C7.01849 1.4037 8.02774 1 9.23883 1H234.503C235.579 1 236.521 1.4037 237.329 2.21109C238.27 3.01849 238.741 4.02774 238.741 5.23884V109.393C238.741 110.47 238.27 111.479 237.329 112.421C236.521 113.228 235.579 113.632 234.503 113.632H121.871C120.66 113.632 119.65 114.036 118.843 114.843C118.036 115.65 117.632 116.66 117.632 117.871Z"
@@ -48,7 +48,6 @@ function MaskOfCreateView({ backgroundUrl }: IProps) {
           />
         </g>
       </mask>
-
       <image
         xmlnsXlink="http://www.w3.org/1999/xlink"
         xlinkHref={backgroundUrl}
@@ -57,6 +56,18 @@ function MaskOfCreateView({ backgroundUrl }: IProps) {
         width={WIDTH}
         height={HEIGHT}
       />
+
+      <defs>
+        <filter id="drop-shadow">
+          <feDropShadow
+            dx="4"
+            dy="4"
+            stdDeviation="2"
+            floodColor="white"
+            floodOpacity="0.4"
+          />
+        </filter>
+      </defs>
     </MaskSvg>
   );
 }
